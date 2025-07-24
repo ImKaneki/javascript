@@ -15,4 +15,9 @@ edadAlumno="hola"
 console.log(edadAlumno)  'hola'
 console.log(PI)
 //solo se usara let cuando creamos la variable luego si deseamos modificar el valor o llamar a la variable
-solo usaremos el nombre
+
+let edad=30
+{
+    edad=40
+}
+console.log(edad)

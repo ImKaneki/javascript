@@ -16,5 +16,16 @@ let potencia=3**2
 let residuo=10%3
 // tarea operadores de comparacion
 // operadores logicos
-// operador tenario
-console.log(potencia)
+ let verdadero=true && true
+
+ let ejercicio ="jose"=="jose" && "1234"=="1234"
+
+ console.log(ejercicio) false
+// operador ternario
+//1. el primer valor debe ser un valor boleani
+//2. el segundo valor se mostrara si el primero valor es verdadero
+//3. el segundo valor se mostrara si el primero valor es falso
+
+let edad=17
+let ternario=edad>18?"eres mayor de edad":"eres menor"
+console.log(ternario)   'eres menor'
