@@ -28,3 +28,34 @@ console.log(divi) 15
  }
 
  //crear un programa que me muestre el numero en texto
+
+ let numero=3
+ if (numero==1){
+    comsole.log("uno")
+ }
+ else if (numero==2){
+    console.log("dos")
+ }
+ else if (numero==3){
+    console.log("tres") tres
+ }
+ else if (numero==4){
+    console.log("cuatro")
+ }
+ else if (numero==5){
+    console.log("cinco")
+ }
+ switch (numero) {
+    case 1:
+        console.log("uno")
+        break
+    case 2:
+        console.log("dos")
+        break
+    case 3:
+        console-log("tres")
+        break
+    default:
+        console.log("fuerra de rango") fuera de rango
+        break
+ }

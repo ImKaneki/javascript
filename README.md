@@ -59,6 +59,16 @@ su clasificacion general se divide en tres
    los operadores terciarios son quellos que evaluan tres valores y dan como resultados un solo valor 
    - operador condicional
 ## 4. controles de flujo 
+nuestros pogramas en javascript contienen mas de una sentencia y las sentencias son ejecutadas una a una como si fuer una historia, de
+arriba hacia abajo como un camino recto.
+### 1. control de desicion (if-else)
+javascript nos permite crear caminos alternativos en nuestros programas dependiendo de una descision a esto se le conoce como caminos
+o ejecucion condicional , que ejecutara un sentencia u otra teniendo en cuenta la condicion asi podemos crear multiples caminos u opciones 
+en nuestro programas.
+si tenemos una condicion verdadera se ejecutara una sentencia si tenemos una condicion false se ejecutara otra sentencia totalmente distinta.
+**Observacion** la ejecucion condicional rompe el flujo normal de un programa.
+### 2. bucles (for)
+### 3. bucles (while)
 ## 5. funciones
 ## 6. metodos para trabajar con datos estructurados
 ### acceder
