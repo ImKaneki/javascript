@@ -70,10 +70,52 @@ si tenemos una condicion verdadera se ejecutara una sentencia si tenemos una con
 ### 2. bucles (for)
 ### 3. bucles (while)
 ## 5. funciones
-## 6. metodos para trabajar con datos estructurados
+las funciones en javascript son bloques de codigos que se ejecutan de manera independiente , podemos decir tambien que sonn mini programas 
+que toman datos como entrada y retornan otros datos como salida.
+las funciones soon fundametales para el correcto ordenamiento de nuestro codigo ademas que nos permite separar de una manera mas ordenada nuestra logico y evitar repetir el codigo
+muchas veces.
+existen tres tipos de funciones 
+### Tipos de funciones
+#### 1. funciones por declaracion 
+este tipo de funcion es la mas conocida y mas usada 
+su estructura es la siguiente:
+
+## 6. metodos para trabajar con datos estructurado
 ### acceder
 ### modifica
 ### crear
 ### insertar
 ### eliminar
 ### ordenar
+## 7. DOM
+### Tareas: concepto y ejemplo de 2. Funciones por expresión y *3. Funciones de flecha (arrow fuction).
+Las funciones por expresión asignan una función a una variable o constante, mientras que las funciones de flecha (arrow functions) son una sintaxis más concisa para definir funciones, introducida en ES6, que es similar a una expresión de función pero sin su propio this o arguments. 
+1. Funciones por expresión 
+Concepto: En JavaScript, una función por expresión es una función definida y asignada a una variable o constante, lo que permite su uso posterior. Es un elemento básico del lenguaje.
+Ejemplo:
+JavaScript
+
+    // Función por expresión
+    const sumar = function(a, b) {
+      return a + b;
+    };
+    
+    console.log(sumar(5, 3)); // Salida: 8
+2. Funciones de flecha (arrow functions)
+Concepto: Son una forma moderna y más concisa de escribir funciones introducida en ES6. Se caracterizan por su sintaxis con flecha (=>). 
+Ventajas:
+Sintaxis más corta. 
+No tienen su propio enlace a this o arguments, lo que las hace útiles en ciertos contextos, como métodos de objetos. 
+Ejemplo:
+JavaScript
+
+    // Función de flecha equivalente a la anterior
+    const sumarFlecha = (a, b) => {
+      return a + b;
+    };
+    
+    console.log(sumarFlecha(5, 3)); // Salida: 8
+    
+    // Otro ejemplo con retorno implícito (si solo hay una línea de código)
+    const multiplicar = (x, y) => x * y;
+    console.log(multiplicar(4, 2)); // Salida: 8
