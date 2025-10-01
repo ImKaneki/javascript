@@ -182,5 +182,110 @@ listaFrutas.split(",")
 ### INSERTAR
 ### ELIMINAR
 ### ORDENAR 
-### 6.2 METODOS PARA OBJETOS.
-## 7. DOM
+### 6.2 Metodos para listas - arrays
+### Crear lista
+```js
+let lista=[]
+```
+#### Agregando elementos a una lista
+```js
+lista[0]="manzana"
+```
+#### Agregando elementos al final de una lista
+```js
+let lista=[]
+lista.push("manzana")
+```
+#### unshift
+el metodo `unshift` agrega elementoos al inicio de una lista
+```js
+let amigos=[`ronny`,`lisbeth`,`josema`]
+amigos.unshift("ronald")
+//retorna ["ronaled","ronny","lisbeth","josema"]
+```
+#### Removiendo elementos de una lista
+#### Pop
+el metodo `pop` al contrario de push extrae el ultimo elemento de una lista
+#### shift
+el metodo `shift` al contrario de unshift extrae al primer elemento de una lista.
+#### Eliminando elementos de una lista
+#### Delete 
+elimina un elemento en base de su indice
+```js
+let texto=["hola","como","";"estas"]
+delete texto[2]
+```
+### Splice
+este metodo elimina el elemento en base a su indice y a la cantidad de elementos a eliminar
+```js
+let vocals=["a","e","e","i","o","u"]
+vocals.splice(2,0,)
+vocals
+```
+#### Combinando o uniendo listas (arrays)
+#### Concat
+este metodo crea un nuevo array que contiene los elemenmtos del array original
+seguido por los elementos de uno o mas array proporcionados.
+```js
+let amigosPrimaria=[`alfredo`,`luis`,`edgar`]
+let amigosSecundaria=[`edison`,`reymi`,`miguel`]
+let amigosSuperior=[`josue`,`marlon`,`handy`]
+friends.concat(amigosPrimaria,amigosSecundaria,amigosSuperior)
+console,log(amigosPrimaria)
+```
+#### Metodos para iterar una lista
+este metodo ejecuta una funcion anonima por cada element de un array
+```js
+let numeros=[1,2,3,4,5,6]
+numeros.forEach(n=>{console.log(n+1)}
+```
+#### MAP
+este metodo ejecuta una funcion anonima por cada elemento de un array , generando una nueva lista
+```js
+let numeros=[1,2,3,4,5,6]
+let nuevosNumeros.map(n=>{return n+1})
+```
+#### Metodos para buscar elementos en una lista
+### Includes
+este metodo busca un valor en especifico y devuelve un vaor boleano 
+en caso de encontrar el valor buscado retorna true caso contrario false.
+
+```js
+let vocales=[`a`,`i`,`o`,`u`]
+let buscaE=vocales.includes(`e`)
+// retorna false
+let buscaA=vocales.includes(`a`)
+// retorna true
+```
+
+#### Filter
+este metodo se usa para encontrar elementos dentro de una lista que cumpla con cierta condicion
+```js
+let numeros=[2,4,5,7,8,1,2,6]
+// deseo una lista con los numero que sean menor a 4
+let nuevosNumeros=numeros.filter(n=>{n<4})
+```
+
+#### Find
+este metodo se usa para encontrar el primero elemento que cumpla con cierta condicion
+a diferencia del `filter` solo retorna un elementoel que coincida con la condicion
+```js
+let lisNumeros=[10,11,3,20,5]
+let menorDiez=lisNumeros.find(n=>{return n>10})
+console.log(menorDiez)
+```
+### 6.3 METODOS PARA OBJETOS.
+#### Creando un objeto
+```js
+//objeto o diccionario vacio
+let objeto={}
+```
+#### Agregamos elementos a un objeto
+recuerden que el elemento de un objeto esta conformado por `clave:valor`
+```js
+objeto["nombre]="ruth"
+objeto["edad"]="18"
+objeto["CUI"]="08674523"
+```
+## 7.ESO
+## 8. DOM
