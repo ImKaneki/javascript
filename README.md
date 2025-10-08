@@ -288,4 +288,87 @@ objeto["edad"]="18"
 objeto["CUI"]="08674523"
 ```
 ## 7.ESO
+### arrow function
+### destructurin
+este es una tecnica para el desempaquetado de listas u objetos em variables
+esta tecnica facilita el acceso a los elementos de una lista u objeto
+```js
+let alumno={
+    "nombre":"miguel",
+    "edad":"17"
+}
+console.log(alumno.nombre)
+console.log(alumno["edad])
+//desestructuracion
+let {nombre,edad}=alumno
+
+
+```
 ## 8. DOM
+- segun sus siglas es modelo de objeto de documento.
+- para la web es una API del navegador, eso significa que nos proporciona una interfaz para comunicarnos entre html y javascript.
+- segun su funcionalidad DOM es el encargado de convertir documentos html y css en objetivos de javascript el DOM es un objeto con el que podemos leer y modificar a nuestro antojo.
+
+la manera como DOM nos permite interactuar con nuestro documento html y css son a travez de selectores.
+### Selectores
+es la manera de como podremos manipular el `dom`, este es el primer
+paso que debemos dominar para realizar operaciones de lectura o modificaciones.
+### Captura de elementos
+#### Selectores Tradicionales
+
+estos selectores son metodos del documento , por que `DOM` trabaja con el documento.
+```js
+// selectores por id
+document.getElementById("mi_div")
+//<section id="mi_div"><section>
+//--selectores por su atributo name
+//<input name="dni" value="34556>
+// dni="34556"
+document.getElementByname("DNI")
+//todos los elementos 
+
+//--selecores por su etiqueta tag
+//<h1></h1>
+document.getElementByTagName("h1")
+  //--selectores por su class
+  //<div class=rojo></div>
+  document.getElementByClassName("rojo")
+```
+
+> [!tip] en la progrmacion web `daw` se hace el uso de ds tecnicas, 1. obtencion de datos (get), 2. creacion de datos (set)
+setter and getter 
+##### selectores modernos o avanzados
+```js
+//para la captura de un elemento , o el primer elemeto que coincida con la busqueda
+document.querySelector()
+//busca y obtiene el elemento que coincida con el nombre de la clase
+document.querySelector(".nombre_clase")
+//busca y obtiene el elemento que coincida con el nombre de la etiqueta
+document.querySelector("#nombre_id")
+//busca y obtiene el elemento que coincida con el nombre de la etiqueta
+document.querySelector("p")
+document.querySelector(".input[name="dni"]")
+
+//para acceder a todas las coincidencias
+//esto retorna un array con todas las coincidencias
+document.querySelectorAll(".nombre_clase")
+```
+
+#### acceder a contenido y actualizar contenido 
+una vez capturada el elemento con `querySelector`pueden hacer uso de `textContent` para acceder al contenido del elemento ,
+de esa misma forma podemos editar o actuaqlizar el contenido `textContent=hola` esto lo que es actualizar el contenido anterior
+coon el contenido que se le este asignando.
+`textContent` solo se usa si deseamos agregar contendio de tipo exto . si desamos setear o agregar contenido de tip `html`
+se debera usar `innerHTML`
+```js
+//<p id="text"> este es un contenido </p>
+let etiquetaP=documente.querySelector("#text")
+console.log(etiquetaP.textcontent)
+//este es un contenido
+etiquetaP.textContent="nuevo texto"
+console.log(etiquetP.textContent)
+//nuevo texto
+
+//<div id="contenedor"></div>
+let div=document.querySelector("#contenedor")
+div.innerHTML="<p>este es un parrafo </p>"

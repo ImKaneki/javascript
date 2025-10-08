@@ -23,6 +23,9 @@ let alumnos=[
    {"nombre":"flor","edad":18,"CUI":34256784},
    {"nombre":"ashly","edad":19,"CUI":34567789}
 ]
+// de mi lista deseo mostrar a la persona que tenga como CUI 23445876
+let buscaCui=alumnos.find(el=>el.CUI == 23445876)
+console.log(buscaCui)
 //deseo mostrar una lista solo de los menores a 19
 let listaMenores=alumnos.filter(al=>al.edad<20)
 console.log(listaMenores)
