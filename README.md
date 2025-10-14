@@ -354,7 +354,7 @@ document.querySelector(".input[name="dni"]")
 document.querySelectorAll(".nombre_clase")
 ```
 
-#### acceder a contenido y actualizar contenido 
+#### acceder, actualizar contenido,crear y remover atributos
 una vez capturada el elemento con `querySelector`pueden hacer uso de `textContent` para acceder al contenido del elemento ,
 de esa misma forma podemos editar o actuaqlizar el contenido `textContent=hola` esto lo que es actualizar el contenido anterior
 coon el contenido que se le este asignando.
@@ -372,3 +372,67 @@ console.log(etiquetP.textContent)
 //<div id="contenedor"></div>
 let div=document.querySelector("#contenedor")
 div.innerHTML="<p>este es un parrafo </p>"
+```
+una vez ya conocido la forma de capturar elementos `html` y la forma de setear contenido (`textcontent`)
+y `html` (`innerhtml`), tambien podemos setear atributos y removerlos.
+```js
+//<div id="contenido">contenido</div>
+//data-description
+let contenido=document.querySelector("#contenido")
+//entre parentesis van dos parametros primero el nombre del atributo al crear y segundo al valor que debe tener 
+contenido.setAttribute("data-description","valor de mi data-description")
+//<div id>"contenido" data-description="valor de mi data-description">contenido</div>
+
+//eliminar el atributo creado
+//entre parentesis el nombre del atributo que se va a eliminar
+contenido.removeAttribute("data-description")
+```
+#### Agregar y eliminar elementos 
+para crear un nuevo elemento no necesitamop capturar un elemento por que crearemos un elemento nuevo
+```js
+// entre los parentesis la etiqueta a crear 
+let nuevoEtiquetaP=document.createElement("p")
+// agregar contenido a mi nueva etiqueta
+nuevoEtiquetaP.textContent="informacion en el parrafo"
+
+// para que esta informacion aparezca de manera visible en mi html debemos agregarlo a un elemento padre.
+/*
+<body>
+</body>
+*/
+let body=document.querySelector("body")
+// hacer uso del metodo que me permite asignarle nuevos hijos
+body.appendChild(nuevoEtiquetaP)
+//deseo eliminar ese elemento que acabo de crear
+//usamps elñ nombre del elemento a eliminar y luego usamos el metodo remove()
+nuevoEtiquetaP.remove()
+```
+#### modificar clases y estilos 
+estos metodos que veremos a continuacion ns permitiran cambiar de manera interactiva los estilos css que se puedan aplicar a ciertos elementos 
+pero haciendo uso del JavaScript y logrando sus cambios de estilo de manera dinamica.
+con estos metodos agregamos clases que existan.
+**index.html**
+```html
+<!--DOCTYPE html head -->
+<body>
+  <section id="principal"><section>
+</body>
+<!--/html-->
+```
+-archivo **style.css**
+```css
+.color-fondo-rojo{
+  background-color:red;
+}
+```
+-archivo **script.js**
+```js
+//agregar a mi section el fondo rojo
+let section=documentquerySelector("#principal")
+section.classList.add("color-fondo-rojo")
+//eliminar la clase
+section.classList.remove("color-fondo-rojo")
+//crear estilos directamente
+section.style.backgroundColor="red"
+```
+### Eventos  (Tarea-averiguar)
